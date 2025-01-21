@@ -1,15 +1,26 @@
+@font-face {
+  font-family: heading-font;
+  src: url(./../assets/fonts/Montserrat_Alternates/MontserratAlternates-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: content-font;
+  src: url(./../assets/fonts/Montserrat_Alternates/MontserratAlternates-Medium.ttf)
+}
+
 :root {
   --icon-height: 25px;
 
   --dark: #2e3440;
-  --light: #a1aac1;
+  --light: #d8dce8;
   --primary: #3d2d12;
-  --secondary: #918e89;
+  --secondary: #a1aac1;
 }
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--light);
 }
 
 .icon {
@@ -26,12 +37,15 @@ body {
   background-color: var(--dark);
   padding: 1rem;
   border-top-right-radius: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   border-bottom-right-radius: 4%;
 }
 
 .location-input-container {
   margin: 0 auto;
-  border-bottom: 1px solid var(--light);
+  border-bottom: 1px solid var(--secondary);
   display: grid;
   grid-template-columns: 1fr auto;
   padding-right: 0.25rem;
@@ -41,6 +55,39 @@ body {
   background-color: transparent;
   outline: none;
   border: none;
-  color: #a1aac1;
+  color: var(--secondary);
   padding: 0.25 0.25rem;
+}
+
+#current-data {
+  color: var(--light);
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#current-temperature {
+  font-family: heading-font;
+  font-size: 4rem;
+}
+
+.feels-like {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--secondary);
+}
+
+#other-data {
+  margin: auto 0;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-family: content-font;
+}
+
+.temperature-data {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
