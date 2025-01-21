@@ -109,6 +109,29 @@ body {
 
 #title {
   font-size: 2rem;
-  /* text-decoration: underline 1; */
   font-family: heading-font;
+  color: var(--primary);
+}
+
+.weather-condition-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 20%;
+  margin: 2rem 2rem;
+}
+
+#weather-condition {
+  font-size: 3rem;
+  font-family: content-font;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+#weather-condition-description {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.weather-condition-gif {
+  width: 100%;
 }
