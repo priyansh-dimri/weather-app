@@ -18,16 +18,15 @@ const parseWeatherData = (weatherDataJSON) => {
     currentConditions: {
       temperature: weatherDataJSON.currentConditions.temp,
       feelsLike: weatherDataJSON.currentConditions.feelslike,
-      conditions: weatherDataJSON.currentConditions.conditions,
       visibility: weatherDataJSON.currentConditions.visibility,
       precipitation: weatherDataJSON.currentConditions.precip,
       snow: weatherDataJSON.currentConditions.snow,
-      humidity: weatherDataJSON.currentConditions.humidity,
       windSpeed: weatherDataJSON.currentConditions.windspeed,
       windDir: weatherDataJSON.currentConditions.winddir,
       pressure: weatherDataJSON.currentConditions.pressure,
       sunrise: weatherDataJSON.currentConditions.sunrise,
       sunset: weatherDataJSON.currentConditions.sunset,
+      conditions: weatherDataJSON.currentConditions.conditions,
       description: weatherDataJSON.days[0].description,
     },
     weeklyForecast: {

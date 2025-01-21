@@ -5,11 +5,12 @@
 
 @font-face {
   font-family: content-font;
-  src: url(./../assets/fonts/Montserrat_Alternates/MontserratAlternates-Medium.ttf)
+  src: url(./../assets/fonts/Montserrat_Alternates/MontserratAlternates-Medium.ttf);
 }
 
 :root {
   --icon-height: 25px;
+  --large-icon-height: 2rem;
 
   --dark: #2e3440;
   --light: #d8dce8;
@@ -25,6 +26,10 @@ body {
 
 .icon {
   height: var(--icon-height);
+}
+
+.large-icon {
+  height: var(--large-icon-height);
 }
 
 .container {
@@ -90,4 +95,20 @@ body {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+/* Main area styling */
+.main {
+  padding: 0.75rem;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#title {
+  font-size: 2rem;
+  /* text-decoration: underline 1; */
+  font-family: heading-font;
 }
