@@ -117,7 +117,7 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   height: 20%;
-  margin: 2rem 2rem;
+  margin: 2rem 2rem 3rem;
 }
 
 #weather-condition {
@@ -134,4 +134,15 @@ body {
 
 .weather-condition-gif {
   width: 100%;
+}
+
+#weather-forecast-title {
+  font-size: 2rem;
+  font-family: content-font;
+  margin-left: 2rem;
+}
+
+#full-address {
+  font-style: italic;
+  margin-left: 2rem;
 }
