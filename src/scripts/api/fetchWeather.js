@@ -8,11 +8,11 @@ const fetchWeatherData = async (location) => {
       `${visualCrossingConfig.baseURL}/${location}?unitGroup=${visualCrossingConfig.unitGroup}&include=${visualCrossingConfig.includeSections}&key=${visualCrossingConfig.apiKey}&contentType=${visualCrossingConfig.contentType}`
     );
     const weatherDataJSON = await weatherData.json();
-    console.log(weatherDataJSON);
     const parsedWeatherData = parseWeatherData(weatherDataJSON);
     const currentCondition = parsedWeatherData.currentConditions.conditions;
     const gifURL = await fetchWeatherGIF(`${currentCondition} weather`);
     parsedWeatherData.gifURL = gifURL;
+    console.log(parsedWeatherData);
     return parsedWeatherData;
   } catch (e) {
     console.log(e);

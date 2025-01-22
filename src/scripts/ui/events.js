@@ -8,8 +8,7 @@ const initializeEvents = () => {
     const location = locationInput.value;
     if (!location) return;
     const weatherData = await fetchWeatherData(location);
-    console.log(weatherData);
-    renderWeather(weatherData.currentConditions);
+    renderWeather(weatherData);
   });
 };
 

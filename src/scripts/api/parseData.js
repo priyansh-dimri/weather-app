@@ -29,9 +29,7 @@ const parseWeatherData = (weatherDataJSON) => {
       conditions: weatherDataJSON.currentConditions.conditions,
       description: weatherDataJSON.days[0].description,
     },
-    weeklyForecast: {
-      days: getWeeklyForecast(weatherDataJSON.days),
-    },
+    days: getWeeklyForecast(weatherDataJSON.days),
   };
 };
 
